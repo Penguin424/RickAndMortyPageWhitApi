@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from 'react';
 
+import '../assets/components/CardViewPrev.css';
+
+import ListsCardsDetails from '../components/ListsCardsDetails.jsx';
+
 const Home = () => {
 
     const [data, setData] = useState([]);
@@ -18,69 +22,10 @@ const Home = () => {
 
     return (
         <div className="container">
-            <h1 className="text-center">Bienvenido</h1>
 
-            <div className="row">
-                <div className="col-md-6">
-                    <div className="card mb-3">
-                        <div className="row g-0">
-                            <div className="col-md-6">
-                                <img width="100%" src={data.length > 0 ? data[1].image : 'ddsd'} alt=""/>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="card mb-3">
-                        <div className="row g-0">
-                            <div className="col-md-6">
-                                <img width="100%" src={data.length > 0 ? data[2].image : 'ddsd'} alt=""/>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-
-            <div className="row">
-                <div className="col-md-6">
-                    <div className="card mb-3">
-                        <div className="row g-0">
-                            <div className="col-md-6">
-                                <img width="100%" src={data.length > 0 ? data[0].image : 'ddsd'} alt=""/>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <div className="card mb-3">
-                        <div className="row g-0">
-                            <div className="col-md-6">
-                                <img width="100%" src={data.length > 0 ? data[3].image : 'ddsd'} alt=""/>
-                            </div>
-                            <div className="col-md-6">
-                                <div className="card-body">
-                                    <h5 className="card-title">Card title</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            </div>
+            <div className="row mb-5"></div>
+            
+            <ListsCardsDetails detailsCard={data} />
 
         </div>
     );
